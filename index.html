@@ -615,38 +615,5 @@
     <div id="scrollToTop" class="scrollToTop mbr-arrow-up">
       <a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a>
     </div>
-  <!-- Facebook Pixel Code -->
-<script>
- !function(f,b,e,v,n,t,s)
- {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
- n.callMethod.apply(n,arguments):n.queue.push(arguments)};
- if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
- n.queue=[];t=b.createElement(e);t.async=!0;
- t.src=v;s=b.getElementsByTagName(e)[0];
- s.parentNode.insertBefore(t,s)}(window, document,'script',
- 'https://connect.facebook.net/en_US/fbevents.js');
- 
- 
-</script>
-<noscript></noscript>
-<!-- End Facebook Pixel Code --><script>
-(function() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://leadrock.com/api/v2/validation/config?track_url=0' + '&domain=' + window.location.protocol + '//' + window.location.host, true);
-    xhr.withCredentials = true;
-    xhr.cache = false;
-    xhr.onload = function() {
-        var data = JSON.parse(xhr.responseText);
-        var trackId = '';
-        if (data.hasOwnProperty('macros') && data.macros.hasOwnProperty('track_id') && trackId !== '') {
-            data.macros.track_id = trackId;
-            }
-        if (data.is_enabled) {
-            LeadrockValidator.init(data);
-        }
-    };
-    xhr.send();
-})();
-</script>
 </body>
 </html>
